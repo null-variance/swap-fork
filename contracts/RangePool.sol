@@ -10,13 +10,14 @@ import "./types/Ownable.sol";
 import "./interfaces/IOwnable.sol";
 
 /**
- * Range Pool is a RangeSwap ERC20 token that facilitates trades between stablecoins. We execute "optimistic swaps" --
+ * This is a fork of RangeSwap, adopted to Ginseng Pillar's ecosystem.
+ * Ginseng Pool is a Ginseng ERC20 token that facilitates trades between stablecoins. We execute "optimistic swaps" --
  * essentially, the pool assumes all tokens to be worth the same amount at all times, and executes as such.
  * The caveat is that tokens must remain within a range, determined by Allocation Points (AP). For example,
  * token A with (lowAP = 1e8) and (highAP = 5e8) must make up 10%-50% of the pool at all times.
- * RangeSwap allows for cheaper execution and higher capital efficiency than existing, priced swap protocols.
+ * Ginseng allows for cheaper execution and higher capital efficiency than existing, priced swap protocols.
  */
-contract RangePool is ERC20, Ownable {
+contract Ginseng is ERC20, Ownable {
 
     using SafeMath for uint;
     using SafeERC20 for IERC20;
@@ -54,7 +55,7 @@ contract RangePool is ERC20, Ownable {
 
     uint public fee; // 9 decimals
     
-    constructor() ERC20( 'Range Pool Token', 'RPT' ) {
+    constructor() ERC20( 'Ginseng Pool', 'GP' ) {
         _mint( msg.sender, 1e18 );
         totalTokens = 1e18;
     }
