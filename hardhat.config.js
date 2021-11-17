@@ -17,15 +17,17 @@ const rinkebyKey = process.env.RINKEBY_KEY;
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  solidity: "0.7.5",
+  solidity: "0.8.0",
   defaultNewtork: "mainnet",
   networks: {
     hardhat: {
     },
+    /*
     mainnet: {
       url: "https://mainnet.infura.io/v3/{}",
       accounts: [mnemonic],
     }
+    */
   },
   path: {
     sources: "./contracts",

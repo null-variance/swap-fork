@@ -1,13 +1,14 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
-pragma solidity 0.7.5;
+pragma solidity ^0.8.0;
 
 import "./libraries/SafeERC20.sol";
 import "./libraries/Address.sol";
 
 import "./types/ERC20.sol";
-import "./types/Ownable.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
 
-import "./interfaces/IOwnable.sol";
+// TODO where did this come from?
+//import "./interfaces/IOwnable.sol";
 
 /**
  * This is a fork of RangeSwap, adopted to Ginseng Pillar's ecosystem.

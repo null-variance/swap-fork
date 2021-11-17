@@ -1,3 +1,9 @@
 {
-  "name": "hardhat-project"
+  "name": "hardhat-project",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.3"
+  },
+  "devDependencies": {
+    "hardhat": "^2.6.8"
+  }
 }
